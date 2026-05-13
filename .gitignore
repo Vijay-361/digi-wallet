@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment variables - NEVER push these
+.env
+
+# Build files
+client/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
