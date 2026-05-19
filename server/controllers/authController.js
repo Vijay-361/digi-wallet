@@ -47,3 +47,4 @@ catch(error)
     res.status(500).json({message : "Server error during registration"});
 }
 };
+module.exports = {register, login};
