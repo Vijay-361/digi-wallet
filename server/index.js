@@ -8,8 +8,12 @@ const transactionRoutes = require("./routes/transactions");
 const walletRoutes = require("./routes/wallet");
 
 const app = express();
+// Add this with other requires at top
+const userRoutes = require("./routes/users");
 
-app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:3000" }));
+// Add this with other app.use lines
+app.use("/api/users", userRoutes);
+app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173"}));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
